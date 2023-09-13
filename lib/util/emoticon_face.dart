@@ -15,7 +15,7 @@ class EmoticonFace extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: liBlue,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(16),
       ),
       padding: EdgeInsets.all(16),
       child: Text(

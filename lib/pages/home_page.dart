@@ -17,6 +17,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: tdBlue,
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(icon: homeIcon, label: ''),
+        BottomNavigationBarItem(icon: homeIcon, label: ''),
+        BottomNavigationBarItem(icon: homeIcon, label: ''),
+      ]),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(25.0),
@@ -50,25 +55,25 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     decoration: BoxDecoration(
                       color: liBlue,
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    padding: EdgeInsets.all(12),
+                    padding: EdgeInsets.all(16),
                     child: notiIcon,
                   )
                 ],
               ),
 
               SizedBox(
-                height: 20,
+                height: 50,
               ),
 
               // SearchBar
               Container(
                 decoration: BoxDecoration(
                   color: liBlue,
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(16),
                 ),
-                padding: EdgeInsets.all(12),
+                padding: EdgeInsets.all(20),
                 child: Row(
                   children: [
                     Icon(
@@ -76,12 +81,13 @@ class _HomePageState extends State<HomePage> {
                       color: tdWhite,
                     ),
                     SizedBox(
-                      width: 5,
+                      width: 8,
                     ),
                     Text(
                       'Search',
                       style: TextStyle(
-                        color: tdWhite,
+                        color: hintTxt,
+                        fontSize: 16,
                       ),
                     ),
                   ],
@@ -89,7 +95,7 @@ class _HomePageState extends State<HomePage> {
               ),
 
               SizedBox(
-                height: 25,
+                height: 50,
               ),
 
               // How do you feel?
@@ -111,9 +117,9 @@ class _HomePageState extends State<HomePage> {
                 height: 25,
               ),
 
-              // face buttons
+              // emoji buttons
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   // badly
                   Column(
@@ -123,18 +129,60 @@ class _HomePageState extends State<HomePage> {
                         height: 15,
                       ),
                       Text(
-                        'Badly',
+                        'Bad',
                         style: p1Text,
                       ),
                     ],
                   ),
+
                   // fine
-                  EmoticonFace(emoticonFace: '👌🏿'),
+                  Column(
+                    children: [
+                      EmoticonFace(emoticonFace: '👌🏿'),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Text(
+                        'Okay',
+                        style: p1Text,
+                      ),
+                    ],
+                  ),
+
                   // well
-                  EmoticonFace(emoticonFace: '🙂'),
+                  Column(
+                    children: [
+                      EmoticonFace(emoticonFace: '🙂'),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Text(
+                        'Good',
+                        style: p1Text,
+                      ),
+                    ],
+                  ),
+
                   // excellent
-                  EmoticonFace(emoticonFace: '😎'),
+                  Column(
+                    children: [
+                      EmoticonFace(emoticonFace: '😎'),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        'Perfecto',
+                        style: p1Text,
+                      ),
+                    ],
+                  ),
                 ],
+              ),
+
+              Expanded(
+                child: Container(
+                  color: tdWhite,
+                ),
               )
             ],
           ),

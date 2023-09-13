@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 
 // Custom colours
 const Color tdBlue = Color(0xFF1976D2);
-const Color liBlue = Color(0xFF459DF5);
+const Color tdGreen = Color(0xFF558B2F);
+const Color liBlue = Color(0xAC459DF5);
 const Color txtBlue = Color(0xFF90CAF9);
+const Color hintTxt = Color(0xBEFFFFFF);
 
 const Color tdWhite = Color(0xFFFFFFFF);
 
@@ -30,4 +32,8 @@ const TextStyle p1Text = TextStyle(
 const Icon notiIcon = Icon(
   Icons.notifications,
   color: tdWhite,
+);
+
+const Icon homeIcon = Icon(
+  Icons.home,
 );
